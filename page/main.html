@@ -1,0 +1,1480 @@
+<!--
+ * @Author: AIpoem
+ * @Date: 2021-04-17 19:45:02
+ * @LastEditors: AIpoem
+ * @LastEditTime: 2021-09-18 10:29:21
+ * @Description: 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Action</title>
+    <!--标题栏logo-->
+    <link rel="icon" type="image/x-icon" href="../image/logoo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- 自定义滚动条 -->
+    <link rel="stylesheet" href="../source/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- eCharts -->
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="../source/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/chart.js"></script>
+    <script src="../js/function.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <nav>
+        <!-- 左侧导航菜单 --> 
+        <div class="left-menu-wrapper">
+            <ul class="left-menu">
+                <li class="menu-active"><i class="menu-icon">&#xe6b4;</i>Home</li>
+                <li><i class="menu-icon">&#xe6fa;</i>Data</li>
+                <li><i class="menu-icon">&#xe746;</i>Task</li>
+                <li><i class="menu-icon">&#xe767;</i>Timeline</li>
+                <li><i class="menu-icon">&#xe606;</i>Community</li>
+            </ul>
+        </div>
+        <!-- 轮播插画 -->
+        <div class="illustrator-wrapper">
+            <ul class="illustrator-list">
+                <li><img class="illustrator" src="../image/女_奔跑.svg.png" alt="illustrations"></li>
+                <li><img class="illustrator" src="../image/男_坐姿.svg.png" alt="illustrations"></li>
+                <li><img class="illustrator" src="../image/女_坐姿.svg.png" alt="illustrations"></li>
+                <li><img class="illustrator" src="../image/男_跳跃.svg.png" alt="illustrations"></li>
+                <li><img class="illustrator" src="../image/女_奔跑.svg.png" alt="illustrations"></li>
+            </ul>
+
+        </div>
+    </nav>
+    <main>
+        <!-- home页 -->
+        <div class="home-container show">
+            <div class="home-wrapper">
+                <header>
+                    <label><input type="text" class="search-input-field" placeholder="Search"></label>
+                    <a href="javascript:;">
+                        <i class="search-icon">&#xe6b3;</i>
+                    </a>
+                    <div class="home-tool-bar">
+                        <div class="home-user-message-wrapper">
+                            <a href="javascript:;" class="home-user-message"><i>&#xe6b1;</i></a>
+                            <a href="javascript:;" class="home-user-chat"><i>&#xe6f4;</i></a>
+                        </div>
+                        <div class="home-user-account">
+                            <img src="../image/头像 男孩.png" alt="user-portrait" class="home-user-account-head">
+                            <a href="./login.html">Sign Up</a>
+                        </div>
+                    </div>
+                </header>
+                <div class="home-main">
+                    <div class="home-content">
+                        <div class="home-top">
+                            <div class="banner-wrapper">
+                                <img src="../image/交流组合.svg.png" alt="banner">
+                                <section>
+                                    <div class="banner-header">
+                                        <h1>
+                                            Take Action From This Moment
+                                        </h1>
+                                        <p>
+                                            correct your procrastination
+                                        </p>
+                                    </div>
+                                    <div class="banner-detail">
+                                        <div class="cumulative-users">
+                                            <i>&#xe74b;</i>
+                                            <p>cumulative users
+                                                1000000+
+                                            </p>
+                                        </div>
+                                        <div class="new-users">
+                                            <i>&#xe75a;</i>
+                                            <p>new users
+                                                500+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="bright-wrapper">
+                                <img src="../image/liangdu.png" alt="brightness-icon">
+                                <div class="current-time">
+                                    <span>1:08</span>
+                                </div>
+                                <p>CHANGE BRIGHTNESS</p>
+                                <div class="bright-box">
+                                    <i class="moon">&#xe6f3;</i>
+                                    <input type="range" id="range" min="10" max="100" value="100">
+                                    <i class="sun">&#xe825;</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-bottom">
+                            <div class="home-task-wrapper">
+                                <h2>Urgent Task</h2>
+                                <a class="task-add-btn" href="javascript:;">
+                                    <img src="../image/bianxie.png" alt="">
+                                </a>
+                                <ul class="task-list">
+                                    <!-- draggable="true" 可拖拽的 -->
+                                    <li draggable="true">
+                                        <span class="decorate-shape"></span>
+                                        <span class="task-item">Have dinner</span>
+                                        <div class="task-time">17:00</div>
+                                    </li>
+                                    <li draggable="true">
+                                        <span class="decorate-shape"></span>
+                                        <span class="task-item">Attend the lecture</span>
+                                        <div class="task-time">18:30</div>
+                                    </li>
+                                    <li draggable="true">
+                                        <span class="decorate-shape"></span>
+                                        <span class="task-item">Class meeting</span>
+                                        <div class="task-time">22:00</div>
+                                    </li>
+                                    <li draggable="true">
+                                        <span class="decorate-shape"></span>
+                                        <span class="task-item">Hand in homework</span>
+                                        <div class="task-time">23:30</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="home-schedule-wrapper">
+                                <div class="weekly-progress-box">
+                                    <p>Weekly Progress</p>
+                                    <!-- 图表 -->
+                                    <div class="weekly-progress-chart"></div>
+                                </div>
+                                <section>
+                                    <div class="event-to-do">
+                                        <!-- 动态修改-->
+                                        <p class="event-amount"></p>
+                                        <span>to do</span>
+                                        <!-- 点击跳转 -->
+                                        <a href="javascript:;" class="click-to-do"><i>&#xe6ed;</i></a>
+                                        <figure>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </figure>
+                                    </div>
+                                    <div class="event-be-done">
+                                        <!-- 动态修改-->
+                                        <p class="event-amount">Six</p>
+                                        <span>have done</span>
+                                        <!-- 点击跳转 -->
+                                        <a href="javascript:;" class="click-be-done"><i>&#xe614;</i></a>
+                                        <figure>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </figure>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="home-view-calendar">
+                                <h2>Calendar</h2>
+                                <div class="view-calendar-header">
+                                    <div>Week</div>
+                                    <div>Month</div>
+                                    <div>Year</div>
+                                </div>
+                                <div class="view-calendar-top-bar">
+                                    <a id="view-calendar-prev" href="javascript:;">
+                                        <i>&#xe600;</i>
+                                    </a>
+                                    <div>
+                                        <span class="view-month">April</span>
+                                        <span class="view-year">2021</span>
+                                    </div>
+                                    <a id="view-calendar-next" href="javascript:;">
+                                        <i>&#xe600;</i>
+                                    </a>
+                                </div>
+                                <ul class="view-week-title">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                </ul>
+                                <ul id="view-every-date">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-implicit-menu">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="switch"></label>
+                        <ul class="implicit-menu">
+                            <li>
+                                <i>&#xe773;</i>
+                                <ul class="home-sub-menu">
+                                    <li>check</li>
+                                    <li>helping</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i>&#xe743;</i>
+                                <ul class="home-sub-menu">
+                                    <li>account</li>
+                                    <li>setting</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i>&#xe76a;</i>
+                                <ul class="home-sub-menu">
+                                    <li>restart</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <i>&#xe76c;</i>
+                                <ul class="home-sub-menu">
+                                    <li>log out</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- data页 -->
+        <div class="data-container">
+            <div class="data-wrapper">
+                <div class="data-left-side">
+                    <div class="data-img-box">
+                        <div class="data-banner"></div>
+                        <img src="../image/data-banner左插画.png" alt="picture">
+                        <img class="right-img" src="../image/data-banner右插画.png" alt="picture">
+                        <p>Let's take a look
+                            at the present results
+                        </p>
+                    </div>
+                    <div class="rate-overview-wrapper">
+                        <h2>Rate Overview</h2>
+                        <div class="data-overview">
+                            <div class="data-total">
+                                <i id="total-icon">&#xe76b;</i>
+                                <p class="data-number" id="total-number">18</p>
+                                <span class="data-detail" id="total-detail">Total</span>
+                            </div>
+                            <div class="data-completed">
+                                <i id="completed-icon">&#xe753;</i>
+                                <p class="data-number" id="completed-number">65<span class="percent">%</span></p>
+                                <span class="data-detail" id="completed-detail">Completed Rate</span>
+                            </div>
+                            <div class="data-uncompleted">
+                                <i id="uncompleted-icon">&#xe745;</i>
+                                <p class="data-number" id="uncompleted-number">35<span class="percent">%</span></p>
+                                <span class="data-detail" id="uncompleted-detail">Uncompleted Rate</span>
+                            </div>
+                            <div class="data-progress">
+                                <i id="progress-icon">&#xe717;</i>
+                                <p class="data-number" id="progress-number">88<span class="percent">%</span></p>
+                                <span class="data-detail" id="progress-detail">Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-line-chart-wrapper">
+                        <div class="data-line-chart"></div>
+                    </div>
+                </div>
+                <div class="data-right-side">
+                    <div class="u-top-bar">
+                        <div class="u-tool-bar">
+                            <div class="u-user-message-wrapper">
+                                <a href="javascript:;"><i class="u-user-icon">&#xe6b1;</i></a>
+                                <a href="javascript:;"><i class="u-user-icon u-user-chat-icon">&#xe6f4;</i></a>
+                            </div>
+                            <div class="u-user-account">
+                                <img src="../image/head-portrait.jpg" alt="user-portrait" class="u-account-head">
+                                <a href="./personal.html" class="u-user-account-name">Rikimaru</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-bar-chart-wrapper">
+                        <div class="data-bar-chart"></div>
+                    </div>
+                    <div class="data-pie-chart-wrapper">
+                        <div class="data-pie-chart">
+                            <p>40<span>%</span></p>
+                            <svg>
+                                <circle cx="50%" cy="50%" r="50"></circle>
+                                <circle class="svg-completed-progress" cx="50%" cy="50%" r="50"></circle>
+                            </svg>
+                            <p>35<span>%</span></p>
+                            <svg>
+                                <circle cx="50%" cy="50%" r="30"></circle>
+                                <circle class="svg-uncompleted-progress" cx="50%" cy="50%" r="30"></circle>
+                            </svg>
+                            <p>60<span>%</span></p>
+                            <svg>
+                                <circle cx="50%" cy="50%" r="30"></circle>
+                                <circle class="svg-overtime-completion-progress" cx="50%" cy="50%" r="30"></circle>
+                            </svg>
+                            <span class="completed-rate"><span></span>Completed rate</span>
+                            <span class="uncompleted-rate"><span></span>Uncompleted rate</span>
+                            <span class="overtime-completed-rate"><span></span>Overtime completion rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- task页面 -->
+        <div class="task-container">
+            <div class="task-wrapper">
+                <div class="task-left-side">
+                    <h2 class="goal-tittle">MY GOALS</h2>
+                    <div class="task-goal-wrapper">
+                        <div class="goal-card-wrapper">
+                            <div class="goal-card" id="0">
+                                <p class="goal-time">
+                                    25 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn Python
+                                </p>
+                                <i class="turn-next">&#xe610;</i>
+                            </div>
+                            <div class="goal-card" id="1">
+                                <p class="goal-time">
+                                    22 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn Java
+                                </p>
+                                <i class="turn-before">&#xe90d;</i>
+                                <i class="turn-next">&#xe610;</i>
+                            </div>
+                            <div class="goal-card" id="2">
+                                <p class="goal-time">
+                                    25 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn C++
+                                </p>
+                                <i class="turn-before">&#xe90d;</i>
+                            </div>
+                        </div>
+                        <div class="goal-card-wrapper">
+                            <div class="goal-card">
+                                <p class="goal-time">
+                                    25 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn Python
+                                </p>
+                                <i class="turn-next">&#xe610;</i>
+                            </div>
+                            <div class="goal-card">
+                                <p class="goal-time">
+                                    22 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn Java
+                                </p>
+                                <i class="turn-before">&#xe90d;</i>
+                                <i class="turn-next">&#xe610;</i>
+                            </div>
+                            <div class="goal-card">
+                                <p class="goal-time">
+                                    25 April - 25 June
+                                </p>
+                                <p class="goal-content">
+                                    Learn C++
+                                </p>
+                                <i class="turn-before">&#xe90d;</i>
+                            </div>
+                        </div>
+                        <div class="goal-card-wrapper">
+                            <div class="goal-card">
+                                <p class="goal-time">
+                                    25 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn Python
+                                </p>
+                                <i class="turn-next">&#xe610;</i>
+                            </div>
+                            <div class="goal-card">
+                                <p class="goal-time">
+                                    22 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn Java
+                                </p>
+                                <i class="turn-before">&#xe90d;</i>
+                                <i class="turn-next">&#xe610;</i>
+                            </div>
+                            <div class="goal-card">
+                                <p class="goal-time">
+                                    25 April - 25 May
+                                </p>
+                                <p class="goal-content">
+                                    Learn C++
+                                </p>
+                                <i class="turn-before">&#xe90d;</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-img-block">
+                        <div class="task-banner">
+                            <p class="task-slogan">
+                                <span class="task-head">Have a good day!</span>
+                                <span>Let's take a look at your task. Here you
+                                    can see the events what you've done and what you need to do.</span>
+                            </p>
+                        </div>
+                        <img src="../image/task-illustration.png" alt="picture" class="task-illustration">
+                    </div>
+                    <div class="task-detail-container">
+                        <div class="task-detail-wrapper">
+                            <ul class="task-detail-menu">
+
+                            </ul>
+                            <div class="todo-input-wrapper">
+                                <input class="todo-input" id="todo" type="text" placeholder="Add to do event">
+                                <a href="javascript:;" class="todo-input-btn">
+                                    <i>&#xe698;</i>
+                                </a>
+                            </div>
+                            <div class="todo-task-full">
+                                <p class="task-full-tip">Your tasks are reach the maximum capacity.
+                                    Delete to continue.
+                                </p>
+                            </div>
+                            <div class="todo-task-empty">
+                                <p class="task-empty-tip">The task you entered is empty.
+                                    Please reenter.
+                                </p>
+                            </div>
+                            <div class="todo-task-wrapper">
+                                <h1 class="todo-task-title">To Do Task</h1>
+                                <span class="todo-count">2</span>
+                                <div class="todo-task-box">
+                                    <ol id="toDoList">
+                                    </ol>
+                                    <h2 class="task-list-title">Done Task</h2>
+                                    <span class="done-count">3</span>
+                                    <ul id="doneList">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-right-side">
+                    <div class="u-top-bar">
+                        <div class="u-tool-bar">
+                            <div class="u-user-message-wrapper">
+                                <a href="javascript:;"><i class="u-user-icon">&#xe6b1;</i></a>
+                                <a href="javascript:;"><i class="u-user-icon u-user-chat-icon">&#xe6f4;</i></a>
+                            </div>
+                            <div class="u-user-account">
+                                <img src="../image/head-portrait.jpg" alt="user-portrait" class="u-account-head">
+                                <a href="./personal.html" class="u-user-account-name">Rikimaru</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meeting-container">
+                        <div class="meeting-header">
+                            <h1 class="meeting-title">Meeting</h1>
+                            <i class="meeting-add-icon">&#xe62c;</i>
+                            <p class="meeting-time meeting-current-time">
+                                <span class="meeting-week meeting-current-week">Sunday</span>
+                                <span class="meeting-date meeting-current-date">11</span>
+                                <span class="meeting-month meeting-current-month">April</span>
+                                <span class="meeting-year meeting-current-year">, 2021</span>
+                            </p>
+
+                        </div>
+                        <ul class="meeting-list">
+                            <li class=" meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span>:
+                                    <span class="fromMin">30</span>-
+                                    <span class="toHour">10</span>:
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span>:
+                                    <span class="fromMin">30</span>-
+                                    <span class="toHour">10</span>:
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span>:
+                                    <span class="fromMin">30</span>-
+                                    <span class="toHour">10</span>:
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span> ：
+                                    <span class="fromMin">30</span> -
+                                    <span class="toHour">10</span> :
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li> 
+                             <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span> ：
+                                    <span class="fromMin">30</span> -
+                                    <span class="toHour">10</span> :
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- timeline页 -->
+        <div class="timeline-container">
+            <div class="timeline-wrapper">
+                <div class="timeline-left-side">
+                    <div class="timeline-search-container">
+                        <div class="search-box">
+                            <input type="text" class="timeline-search-input" placeholder="Search">
+                            <img class="search-input-icon" src="../image/timeline-search-icon.png" alt="search-icon">
+                        </div>
+                    </div>
+                    <div class="timeline-img-block">
+                        <div class="timeline-banner">
+                            <p class="timeline-slogan">
+                                <span class="timeline-head">Hi Rikimaru!</span>
+                                <span>Welcome to your daily event calender. Here you
+                                    can see all the upcoming event, meetings.</span>
+                            </p>
+                        </div>
+                        <img src="../image/图书义卖.png" alt="decorative-picture" class="timeline-illustration1">
+                        <img src="../image/坐着男.png" alt="decorative-picture" class="timeline-illustration2">
+                    </div>
+                    <h2>Timeline</h2>
+                    <div>
+                        <div class="timeline-header">
+                            <span>1 - 12</span>
+                            <!-- 月份 -->
+                            <span></span>
+                            <span>In Progress</span>
+                            <span>weekly
+                                <i id="prev">&#xe604;</i>
+                                <i id="next">&#xe604;</i>
+                            </span>
+                        </div>
+                        <ul class="timeline-weekday">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                        </ul>
+                        <ul class="timeline-date">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                        </ul>
+                        <div class="timeline-detail-container">
+                            <div class="schedule">
+                                <h2>Schedule</h2>
+                                <input type="checkbox" id="add-schedule">
+                                <label for="add-schedule">
+                                    <i>&#xe626;</i>
+                                </label>
+                                <span>Edit</span>
+                                <ol>
+                                    To manage time better, we need to make good use of timetable, where you can add some
+                                    necessary things...
+                                </ol>
+                                <textarea placeholder="Add your schedule here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-right-side">
+                    <div class="u-top-bar">
+                        <div class="u-tool-bar">
+                            <div class="u-user-message-wrapper">
+                                <a href="javascript:;"><i class="u-user-icon">&#xe6b1;</i></a>
+                                <a href="javascript:;"><i class="u-user-icon u-user-chat-icon">&#xe6f4;</i></a>
+                            </div>
+                            <div class="u-user-account">
+                                <img src="../image/head-portrait.jpg" alt="user-portrait" class="u-account-head">
+                                <a href="./personal.html" class="u-user-account-name">Rikimaru</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meeting-container">
+                        <div class="meeting-header">
+                            <h1 class="meeting-title">Meeting</h1>
+                            <span class="meeting-view-all">View all</span>
+                            <p class="meeting-time meeting-current-time">
+                                <span class="meeting-week meeting-current-week">Sunday</span>
+                                <span class="meeting-date meeting-current-date">11</span>
+                                <span class="meeting-month meeting-current-month">April</span>
+                                <span class="meeting-year meeting-current-year">, 2021</span>
+                            </p>
+                        </div>
+                        <ul class="meeting-list">
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span>:
+                                    <span class="fromMin">30</span>-
+                                    <span class="toHour">10</span>:
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span>:
+                                    <span class="fromMin">30</span>-
+                                    <span class="toHour">10</span>:
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span>:
+                                    <span class="fromMin">30</span>-
+                                    <span class="toHour">10</span>:
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span> ：
+                                    <span class="fromMin">30</span> -
+                                    <span class="toHour">10</span> :
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                            <li class="meeting-item">
+                                <p class="meeting-detail-time">
+                                    <span class="fromHour">08</span> ：
+                                    <span class="fromMin">30</span> -
+                                    <span class="toHour">10</span> :
+                                    <span class="toMin">30</span>
+                                    <span class="detail-date"></span>
+                                    <span class="detail-month"></span>
+                                </p>
+                                <p class="meeting-detail-event">
+                                    Study advanced mathematics
+                                    At school library
+                                </p>
+                                <span class="delete-meeting-event">
+                                    <i>&#xe607;</i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- community页 -->
+        <div class="community-container">
+            <div class="community-wrapper">
+                <div class="community-left-side">
+                    <h1>MY COMMUNITY</h1>
+                    <ul class="community-menu">
+                        <li class="community-menu-active">All</li>
+                        <li>Newest Sharing</li>
+                        <li>Special Focus</li>
+                        <li>Photo Sharing</li>
+                    </ul>
+                    <div class="community-detail-wrapper">
+                        <div class="community-all show">
+                            <div class="upload-pic-wrapper">
+                                <textarea></textarea>
+                                <button>SEND</button>
+                                <ul class="upload-pic-list">
+                                    <li>
+                                        <div class="upload-close">x</div>
+                                        <img src="../image/community-comments.JPG" alt="comments-picture">
+                                    </li>
+                                    <li class="upload-file">
+                                        <!-- multiple实现文件选择框的多选 -->
+                                        <input id="file" type="file" name="file" multiple>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <ul class="sharing-ex-list" data-mcs-theme="rounded-dark" style="height: 470px;">
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <div>
+                                        <img src="../image/头像 (2).png" alt="user-portrait">
+                                    </div>
+                                    <p class="ex-info-text">
+                                        At the end of each day, write down what you did all day, in 15-minute
+                                        increments.
+                                    </p>
+                                    <img src="../image/community-comments.JPG" alt="comments-picture">
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 06:00</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>24</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                            <!-- <a class="info-dele" href="javascript:;">删除</a> -->
+                                        </span>
+                                    </p>
+                                    <input type="checkbox" id="option1">
+                                    <label for="option1"><i>&#xe609;</i></label>
+                                    <ul class="user-option">
+                                        <li><i>&#xe682;</i></li>
+                                        <li><i>&#xe6a7;</i></li>
+                                    </ul>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <div>
+                                        <img src="../image/头像 (3).png" alt="user-portrait">
+                                    </div>
+                                    <p class="ex-info-text">
+                                        At the end of the week, analyze how your time could have been organized more
+                                        efficiently this week? Were there activities that took up too large a percentage
+                                        of your time? Are there ways to increase efficiency?
+                                    </p>
+                                    <img src="../image/community-comments.JPG" alt="user-portrait">
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 01:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>3</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                        </span>
+                                    </p>
+                                    <input type="checkbox" id="option2">
+                                    <label for="option2"><i>&#xe609;</i></label>
+                                    <ul class="user-option">
+                                        <li><i>&#xe682;</i></li>
+                                        <li><i>&#xe6a7;</i></li>
+                                    </ul>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <div>
+                                        <img src="../image/头像 (2).png" alt="">
+                                    </div>
+                                    <p class="ex-info-text">
+                                        At the end of each day, write down what you did all day, in 15-minute
+                                        increments.
+                                    </p>
+                                    <img src="../image/community-comments.JPG" alt="comments-picture">
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 06:00</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>24</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                        </span>
+                                    </p>
+                                    <input type="checkbox" id="option3">
+                                    <label for="option3"><i>&#xe609;</i></label>
+                                    <ul class="user-option">
+                                        <li><i>&#xe682;</i></li>
+                                        <li><i>&#xe6a7;</i></li>
+                                    </ul>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <div>
+                                        <img src="../image/头像 (4).png" alt="">
+                                    </div>
+                                    <p class="ex-info-text">
+                                        Know how your time is being spent. Pick a week and record what you do every 30
+                                        minutes every day, then do a sort and tally to see what areas you are spending
+                                        too much time on. In order to make progress in everything, you must first
+                                        understand the current situation.
+                                    </p>
+                                    <img src="../image/community-comments.JPG" alt="comments-picture">
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Yesterday 07:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>45</span></a>
+                                            <a class="info-down" href="javascript:;"><i
+                                                    class="down-active">&#xeead;</i><span>3</span></a>
+                                        </span>
+                                    </p>
+                                    <input type="checkbox" id="option4">
+                                    <label for="option4"><i>&#xe609;</i></label>
+                                    <ul class="user-option">
+                                        <li><i>&#xe682;</i></li>
+                                        <li><i>&#xe6a7;</i></li>
+                                    </ul>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <div>
+                                        <img src="../image/头像 (2).png" alt="">
+                                    </div>
+                                    <p class="ex-info-text">
+                                        At the end of each day, write down what you did all day, in 15-minute
+                                        increments.
+                                    </p>
+                                    <img src="../image/community-comments.JPG" alt="comments-picture">
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 06:00</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>24</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                        </span>
+                                    </p>
+                                    <input type="checkbox" id="option5">
+                                    <label for="option5"><i>&#xe609;</i></label>
+                                    <ul class="user-option">
+                                        <li><i>&#xe682;</i></li>
+                                        <li><i>&#xe6a7;</i></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="community-newest-sharing">
+                            <div class="sharing-input-box">
+                                <div class="sharing-input-btn">
+                                    <button id="send" disabled="true">SEND
+                                        <i>&#xe60e;</i>
+                                    </button>
+                                </div>
+                                <!-- 编辑区 -->
+                                <textarea class="sharing-input-editor"
+                                    placeholder="Share Your Experience here.."></textarea>
+                            </div>
+                            <ul class="sharing-ex-list" data-mcs-theme="rounded-dark" style="height: 470px;">
+                                <li class="sharing-ex-item">
+                                    <img src="../image/头像 (1).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        Know how your time is being spent. Pick a week and record what you do every 30
+                                        minutes every day, then do a sort and tally to see what areas you are spending
+                                        too much time on. In order to make progress in everything, you must first
+                                        understand the current situation.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 07:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>12</span></a>
+                                            <a class="info-down" href="javascript:;"><i
+                                                    class="down-active">&#xeead;</i><span>2</span></a>
+                                            
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <img src="../image/头像 (2).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        At the end of each day, write down what you did all day, in 15-minute
+                                        increments.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 06:00</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>24</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                           
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <img src="../image/头像 (3).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        At the end of the week, analyze how your time could have been organized more
+                                        efficiently this week? Were there activities that took up too large a percentage
+                                        of your time? Are there ways to increase efficiency?
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 01:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>3</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                            
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <img src="../image/头像 (4).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        Know how your time is being spent. Pick a week and record what you do every 30
+                                        minutes every day, then do a sort and tally to see what areas you are spending
+                                        too much time on. In order to make progress in everything, you must first
+                                        understand the current situation.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Yesterday 07:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>45</span></a>
+                                            <a class="info-down" href="javascript:;"><i
+                                                    class="down-active">&#xeead;</i><span>3</span></a>
+                                
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <img src="../image/头像 (2).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        At the end of each day, write down what you did all day, in 15-minute
+                                        increments.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Yesterday 05:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i>&#xe62b;</i><span>0</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                           
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <img src="../image/头像 (1).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        Know how your time is being spent. Pick a week and record what you do every 30
+                                        minutes every day, then do a sort and tally to see what areas you are spending
+                                        too much time on. In order to make progress in everything, you must first
+                                        understand the current situation.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">2021-5-31 07:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i>&#xe62b;</i><span>0</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                           
+                                        </span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="community-special">
+                            <ul class="sharing-ex-list" data-mcs-theme="rounded-dark" style="height: 470px;">
+                                <li class="sharing-ex-item">
+                                    <!-- 头像 -->
+                                    <img src="../image/头像 (1).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        Know how your time is being spent. Pick a week and record what you do every 30
+                                        minutes every day, then do a sort and tally to see what areas you are spending
+                                        too much time on. In order to make progress in everything, you must first
+                                        understand the current situation.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 07:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>12</span></a>
+                                            <a class="info-down" href="javascript:;"><i
+                                                    class="down-active">&#xeead;</i><span>2</span></a>
+                                
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                   
+                                    <img src="../image/头像 (2).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        At the end of each day, write down what you did all day, in 15-minute
+                                        increments.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 06:00</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>24</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                            
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                   
+                                    <img src="../image/头像 (3).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        At the end of the week, analyze how your time could have been organized more
+                                        efficiently this week? Were there activities that took up too large a percentage
+                                        of your time? Are there ways to increase efficiency?
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Today 01:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>3</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                    
+                                    <img src="../image/头像 (4).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        Know how your time is being spent. Pick a week and record what you do every 30
+                                        minutes every day, then do a sort and tally to see what areas you are spending
+                                        too much time on. In order to make progress in everything, you must first
+                                        understand the current situation.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Yesterday 07:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i
+                                                    class="like-active">&#xe62b;</i><span>45</span></a>
+                                            <a class="info-down" href="javascript:;"><i
+                                                    class="down-active">&#xeead;</i><span>3</span></a>
+                                           
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                  
+                                    <img src="../image/头像 (2).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        At the end of each day, write down what you did all day, in 15-minute
+                                        increments.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">Yesterday 05:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i>&#xe62b;</i><span>0</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                           
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="sharing-ex-item">
+                                   
+                                    <img src="../image/头像 (1).png" alt="user-portrait">
+                                    <p class="ex-info-text">
+                                        Know how your time is being spent. Pick a week and record what you do every 30
+                                        minutes every day, then do a sort and tally to see what areas you are spending
+                                        too much time on. In order to make progress in everything, you must first
+                                        understand the current situation.
+                                    </p>
+                                    <p class="ex-info-operation">
+                                        <span class="info-time">2021-5-31 07:01</span>
+                                        <span>
+                                            <a class="info-top" href="javascript:;"><i>&#xe62b;</i><span>0</span></a>
+                                            <a class="info-down" href="javascript:;"><i>&#xeead;</i><span>0</span></a>
+                                        
+                                        </span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="community-photo-sharing">
+                            <div class="photo-wrapper">
+                                <div class="photo-item">
+                                    <div>
+                                    </div>
+                                    <img class="photo" src="../image/img/1.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/2.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/3.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/4.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/5.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/6.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/7.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/8.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/9.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/10.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/11.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/12.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/13.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/14.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/15.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/16.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/17.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/18.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/19.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+                                    </div>
+                                    <img class="photo" src="../image/img/20.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/21.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/22.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/23.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/24.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+                                    </div>
+                                    <img class="photo" src="../image/img/25.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/26.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/27.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/28.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+
+                                    </div>
+                                    <img class="photo" src="../image/img/29.jpeg">
+                                </div>
+                                <div class="photo-item">
+                                    <div>
+                                    </div>
+                                    <img class="photo" src="../image/img/30.jpeg">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="community-right-side">
+                    <div class="community-user">
+                        <div class="community-user-head">
+                            <h1>INTO1-RIKIMARU</h1>
+                            <i>&#xe609;</i>
+                            <!-- 添加 -->
+                            <i>&#xe60c;</i>
+                            <!-- 爱心 -->
+                            <i>&#xe60d;</i>
+                        </div>
+                        <img src="../image/head-portrait.jpg" alt="user-portrait">
+                        <span>Rikimaru</span>
+                        <p>"I love Live Action."</p>
+                    </div>
+                    <div class="community-header">
+                        <div class="community-box community-followers">
+                            <figcaption>
+                                <i>&#xe69d;</i>
+                            </figcaption>
+                            <figure class="sample">
+                                <div>
+                                    <img src="../image/坐姿女备份.png" alt="decorative-picture">
+                                </div>
+                                <div>
+                                    <h2>Followers</h2>
+                                    <span>1200+</span>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="community-box community-fans">
+                            <figcaption>
+                                <i>&#xe69d;</i>
+                            </figcaption>
+                            <figure class="sample">
+                                <div>
+                                    <img src="../image/飞奔女备份.png" alt="decorative-picture">
+                                </div>
+                                <div>
+                                    <h2>Fans</h2>
+                                    <span>1800+</span>
+                                </div>
+                            </figure>
+                        </div>
+                        <div class="community-box community-likes">
+                            <figcaption>
+                                <i>&#xe69d;</i>
+                            </figcaption>
+                            <figure class="sample">
+                                <div>
+                                   
+                                    <img src="../image/漂浮男备份.png" alt="decorative-picture">
+                                </div>
+                                <div>
+                                    <h2>Likes</h2>
+                                    <span>2000+</span>
+                                </div>
+                            </figure>
+
+                        </div>
+                    </div>
+                    <h1>Social</h1>
+                    <div class="social-wrapper">
+                        <a href="javascript:void(0)" class="btn btn_facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="javascript:void(0)" class="btn btn_twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="javascript:void(0)" class="btn btn_google"><i class="fa fa-google"></i></a>
+                        <a href="javascript:void(0)" class="btn btn_instagram"><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <div class="community-ad-wrapper">
+                        <div class="community-ad">
+                            <p>Unsleash the freelance super power</p>
+                            <img src="../image/drawkit-grape-pack-illustration-13.png" alt="ad-picture">
+                            <div><i>&#xe6a4;</i></div>
+                        </div>
+                        <div class="ad-content">
+                            <p>We Help You Crush Your Competition
+                            </p>
+                            <img src="../image/drawkit-grape-pack-illustration-20.png" alt="ad-picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 点击添加meeting -->
+    <div class="mask-meeting">
+        <div class="meeting-add-box">
+            <h2>Add Meeting Information</h2>
+            <div class="meeting-add-detail">
+                <div class="meeting-add-time">
+                    <h3><i>&#xe699;</i>Set A Meeting Time</h3>
+                    <span>FROM</span>
+                    <input type="text" class="time-hour-from">:
+                    <input type="text" class="time-min-from">
+                    <span>TO</span>
+                    <input type="text" class="time-hour-to">:
+                    <input type="text" class="time-min-to">
+                    <p class="invalid-tip">invalid input!</p>
+                </div>
+                <div class="meeting-add-event">
+                    <h3><i>&#xf099;</i>Set a specific detail</h3>
+                    <textarea class="meeting-input-field"></textarea>
+                </div>
+            </div>
+            <input type="button" value="Return" id="return">
+            <input type="button" value="OK!" id="ok">
+        </div>
+    </div>
+    <!-- 点击添加urgent task -->
+    <div class="mask-urgent-task">
+        <div class="task-add-box">
+            <h2>Add Your Urgent Task</h2>
+            <span><i>&#xe607;</i></span>
+            <div class="task-add-detail">
+                <textarea name="taskName" placeholder="Put it here..."></textarea>
+                <span>DEADLINE</span>
+                <input type="text" class="urgent-hour">:
+                <input type="text" class="urgent-min">
+            </div>
+            <input type="button" value="OK!" class="task-add-ok">
+        </div>
+    </div>
+</body>
+
+</html>

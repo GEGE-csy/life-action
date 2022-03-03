@@ -1,0 +1,88 @@
+<!--
+ * @Author: AIpoem
+ * @Date: 2021-04-26 21:01:02
+ * @LastEditors: AIpoem
+ * @LastEditTime: 2021-06-04 18:42:20
+ * @Description: 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Action</title>
+    <link rel="icon" type="image/x-icon" href="../image/logoo.ico"> <!--标题栏logo-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/function.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+
+<body>
+    <div class="tip">Username not existing</div>
+    <div class="container" id="container">
+        <!-- 登陆 -->
+        <div class="form-container sign-in-container">
+            <form action="javascript:;">
+                <div class="sign-in-header">
+                    <h1 class="form-title sign-in-title">Welcome back</h1>
+                    <p class="form-tip sign-in-tip">sign in to continue</p>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="sign-in-input" id="sign-in-name">
+                    <input type="password" class="sign-in-input" id="sign-in-pw">
+                    <span class="username-font login-username-font">username</span>
+                    <span class="password-font login-password-font">password</span>
+                    <!-- 滑块验证盒子 -->
+                    <div class="validation-in-box">
+                        <!-- 滑块 -->
+                        <div class="validation-in-btn" style="left: 0px;"></div>
+                        <p class="validation-in-tip">Slide to the right</p>
+                        <!-- 背景 -->
+                        <div class="validation-in-bg" style="width: 0px;"></div>
+                    </div>
+                </div>
+                <button class="sign-in-btn">Sign in
+                </button>
+                <a class="switch-btn" href="javascript:;" id="signIn">Don't have an account?Register</a>
+            </form>
+        </div>
+        <!-- 注册 -->
+        <div class="form-container sign-up-container">
+            <form action="javascript:;">
+                <div class="sign-up-header">
+                    <h1 class="form-title sign-up-title">New account</h1>
+                    <p class="form-tip sign-up-tip">sign up to explore</p>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="sign-up-input" id="sign-up-name">
+                    <input type="password" class="sign-up-input" id="sign-up-pw">
+                    <span class="username-font register-username-font">username</span>
+                    <span class="password-font register-password-font">password</span>
+                </div>
+                <button class="sign-up-btn">Sign up</button>
+                <a class="switch-btn" href="javascript:;" id="signUp">Already have an account?Sign in</a>
+            </form>
+        </div>
+        <!-- 插画 -->
+        <div class="illustration-container">
+            <div class="illustration-wrapper">
+                <div class="illustration illustration-left">
+                </div>
+                <div class="illustration illustration-right">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="success-login">
+        <i>&#xe70a;</i>
+        <h1 class="logging-in">
+            Loading...
+        </h1>
+    </div>
+</body>
+
+</html>

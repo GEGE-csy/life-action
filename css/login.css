@@ -1,0 +1,444 @@
+@font-face {
+    font-family: 'iconfont';  /* Project id 2210822 */
+    src: url('http://at.alicdn.com/t/font_2210822_rmsqx2xmm5.woff2?t=1622630865932') format('woff2'),
+         url('http://at.alicdn.com/t/font_2210822_rmsqx2xmm5.woff?t=1622630865932') format('woff'),
+         url('http://at.alicdn.com/t/font_2210822_rmsqx2xmm5.ttf?t=1622630865932') format('truetype');
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 设置的边框和内边距的值是包含在width内的*/
+    box-sizing: border-box;
+}
+.show {
+    display: block!important;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    /* 内容垂直排列 */
+    flex-direction: column;
+    /* 垂直水平居中 */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FCE3DF;
+}
+
+i {
+    font-family: 'iconfont', serif;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* 最外层 */
+.container {
+    background-color: #fff;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.form-container form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.form-container input {
+    outline: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 20px 0 0 0;
+    width: 100%;
+    height: 42px;
+}
+
+.input-box .sign-in-input {
+    border: 1px solid #fe6b57;
+    color: #f6ac9f;
+}
+
+.input-box .sign-up-input {
+    border: 1px solid #f7b360;
+    color: #e0b9ba;
+}
+
+#sign-in-pw,
+#sign-up-pw {
+    margin-bottom: 10px;
+}
+
+.input-box .validation-in-box {
+    width: 100%;
+    height: 32px;
+    margin: 0 0 10px 0;
+    position: relative;
+    border: 1px solid rgba(252, 227, 223, 1);
+    display: none;
+}
+
+.validation-in-btn {
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #fe6b57;
+    background: #fff url(../image/向右icon.png) no-repeat 7px 7px;
+    background-size: 18px 13px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.validation-in-tip {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    z-index: 2;
+    font-size: 13px;
+    color: #fe6b57;
+    font-weight: bold;
+    user-select: none;
+}
+.validation-in-bg {
+  position: absolute;
+  height: 100%;
+  background: rgba(252, 227, 223, 1.5);
+  z-index: 1;
+}
+
+i {
+    font-size: 18px;
+    vertical-align: -3px;
+}
+
+
+
+button {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    height: 45px;
+    width: 240px;
+}
+
+.sign-in-btn {
+    background: linear-gradient(90deg, #f6ac9f, #fe6b57);
+    position: relative;
+    transition: all 0.2s;
+}
+
+.sign-up-btn {
+    background: linear-gradient(90deg, #FFCCA9, #FFC182);
+    position: relative;
+    transition: all 0.2s;
+}
+
+.sign-up-btn::after,
+.sign-in-btn::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 240px;
+    height: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
+    transform: rotate(-45deg) translate(0, -360px);
+}
+
+.sign-up-btn:hover,
+.sign-in-btn:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in-btn:hover::after,
+.sign-up-btn:hover::after {
+    transition: 0.6s;
+    transform: rotate(-45deg) translate(0, 100px);
+}
+
+a.switch-btn {
+    color: #f6ac9f;
+    /* 过渡效果 */
+}
+
+a.switch-btn:hover {
+    text-decoration: underline!important;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+/* 登录页 */
+.sign-in-container {
+    /* 定位在右边 */
+    right: 0;
+    width: 50%;
+    /* 覆盖在注册页上面 */
+    z-index: 2;
+    /* 登陆换成注册时的过渡效果 */
+    transition: transform 0.6s ease-out;
+}
+/* 注册页 */
+.sign-up-container {
+    right: 0;
+    width: 50%;
+    /* 隐藏注册页 */
+    opacity: 0;
+    /* 注册页在下面 */
+    z-index: 1;
+    /* 注册换成登陆时的过渡效果 */
+    transition: all 0.6s ease-out;
+}
+/* 插画层 */
+.illustration-container {
+    position: absolute;
+    /* 插画层在左边 */
+    left: 0;
+    /* 只显示一张插画 */
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    /* 过渡效果 */
+    transition: all 0.6s ease-out;
+    /* 层级关系最高 */
+    z-index: 100;
+}
+/* 插画盒子 */
+.illustration-wrapper {
+    height: 100%;
+    /* 装两张插画 */
+    width: 200%;
+    /* 相对两张插画定位 */
+    position: relative;
+    /* 向左偏移一张插画(半个盒子) */
+    left: -100%;
+}
+
+/* 插画相对插画盒子 */
+.illustration {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+/* 背景图 */
+.illustration-left {
+    /* 初始向左偏移了100%，因此初始时被隐藏 */
+    background: url(../image/register-background.png) no-repeat 0 0;
+    background-size: 422px 480px;
+}
+/* 背景图 */
+.illustration-right {
+    /* 初始时被显现 */
+    background: url(../image/login-background.png) no-repeat 0 0;
+    background-size: 465px 480px;
+    right: 0;
+}
+
+/* 动画类 .right-active*/
+/* 将登陆页切换到右侧，且隐藏 */
+.right-active .sign-in-container {
+    left: 0;
+    z-index: -1;
+}
+
+/* 将插画页换到左边 */
+.right-active .illustration-container {
+   left: 50%;
+}
+
+/* 使注册页显示到登陆页上面 */
+.right-active .sign-up-container {
+    /* 使注册页出现 */
+    opacity: 1;
+    z-index: 3;
+    left: 0;
+}
+
+.right-active .illustration-wrapper {
+    left: 0;
+}
+
+.form-container .form-title {
+    user-select: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sign-in-title,
+.sign-in-tip {
+    color: #f6ac9f;
+}
+
+.sign-up-title,
+.sign-up-tip {
+    color: #e0b9ba;
+}
+
+.form-container .form-tip {
+    user-select: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sign-in-header {
+    margin: 0 0 10px -65px;
+}
+
+.sign-up-header {
+    margin: 0 0 10px -85px;
+}
+
+.input-box {
+    width: 75%;
+    position: relative;
+}
+
+.username-font,
+.password-font {
+    position: absolute;
+    user-select: none;
+    background-color: #fff;
+    font-size: 12px;
+    padding: 0 5px;
+    color: #f6ac9f;
+}
+
+.username-font {
+    top: 10px;
+    left: 13px;
+}
+
+.register-username-font,
+.register-password-font {
+    color: #e0b9ba;
+}
+
+.password-font {
+    top: 72px;
+    left: 15px;
+}
+
+.sign-in-forget,
+.sign-up-forget {
+    float: right;
+    font-size: 12px;
+    color: #f6ac9f;
+    user-select: none;
+    margin-bottom: 20px;
+}
+
+.sign-up-forget {
+    color: #e0b9ba;
+}
+
+#signUp,
+#signIn {
+    display: block;
+    text-align: center;
+    width: 220px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.sign-in-input:hover {
+    box-shadow: 0 0 0 4px rgb(254 107 87 / 10%);
+}
+
+.sign-up-input:hover {
+    box-shadow: 0 0 0 4px rgb(247 179 96 / 10%);
+}
+
+.tip {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    width: 768px;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    color: #f6ac9f;
+    display: none;
+    
+}
+.invalid-border {
+    border: 1px solid red!important;
+}
+.invalid-tip {
+    color: red!important;
+}
+.success-login {
+    position: absolute;
+    top: 155px;
+    right: 335px;
+    width: 384px;
+    height: 480px;
+    background-color: rgba(255,255,255,0.93);
+    border-radius: 0 40px 40px 0;
+    z-index: 100;
+    display: none;
+}
+.success-login .logging-in {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-bottom: 3px solid #f2f2f2;
+    color: #f2f2f2;
+}
+.success-login i{
+    position: absolute;
+    top: 160px;
+    left: 160px;
+    font-size: 55px;
+    color: #fe6b57;
+}
+.success-login .logging-in::before {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fe6b57;
+    overflow: hidden;
+    border-bottom: 3px solid #fe6b57;
+    animation: logging 5s linear infinite;
+}
+
+@keyframes logging
+{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
